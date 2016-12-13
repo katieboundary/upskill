@@ -1,0 +1,32 @@
+<% if session[:user_id] != nil %>
+  <ul class="login">
+    <li>
+      <a href="/">home</a>
+    </li>
+    <li>
+      <form  method="post" action="/sessions/:id">
+        <input type="hidden" name="_method" value='delete'>
+        <input id="logout" type="submit" value="log out">
+      </form>
+    </li>
+  </ul>
+  <br>
+  <br>
+  <br>
+<% else %>
+  <ul class="login">
+    <li>
+      <a href="/users/new">Register</a>
+    </li>
+    <li>
+      <a href="/sessions/new">Login</a>
+    </li>
+    <li>
+      <a href="/">Home</a>
+    </li>
+  </ul>
+  <br>
+  <br>
+  <br>
+
+<%end%>

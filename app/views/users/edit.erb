@@ -1,0 +1,16 @@
+<p>Edit Account</p>
+
+<form action="/users/<%= @user.id %>" method="POST">
+
+  <input type="hidden" name="_method" value="PUT">
+
+  <input type="text" name="user[full_name]" placeholder="Full Name" value="<%= @user.full_name %>">
+
+  <input type="text" name="user[email]" placeholder="Email" value="<%= @user.email %>">
+
+  <input type="password" name="user[password]" value="<%= @user.password %>">
+
+  <input type="submit" value="Submit">
+
+
+<form>

@@ -1,0 +1,10 @@
+<% if @user %>
+  <h1>Hi, <%= @user.full_name %>!</h1>
+  <p>Congratulations! You can visit the <a href="/secret">secret page</a></p>
+
+<% else %>
+  <h1>Register as a new user or log in.</h1>
+
+  <p>Sign in <a href="/sessions/new">here</a></p>
+  <p>Register as a new user <a href="/users/new">here</a></p>
+<% end %>
