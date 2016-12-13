@@ -1,0 +1,11 @@
+<p>These are ALL the users:</p>
+<ul>
+  <% @users.each do |user| %>
+    <li>
+     <a href="/users/<%= user.id %>"><%= user.full_name %></a>
+
+    </li>
+  <% end %>
+</ul>
+
+<a href="/users/new">Create new user</a>
