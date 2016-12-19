@@ -18,8 +18,11 @@
 
   <title></title>
 </head>
-<body>
 <%= erb :'/partials/_header', layout: false %>
+
+<body>
+<%= erb :'/partials/_unsplash-image', layout: false %>
+<%= erb :'/partials/_youtube-form', layout: false %>
   <%= yield %>
 </body>
 </html>

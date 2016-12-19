@@ -5,13 +5,9 @@ class User < ActiveRecord::Base
   validates :email, presence: true, uniqueness: true
   validates :password_hash, presence: true
 
-  # validates_presence_of :first_name
-  # validates_presence_of :last_name
-  # validates_presence_of :username
-  # validates_uniqueness_of :username
-  # validates_presence_of :password
-  # validates_presence_of :email
-  # validates_uniqueness_of :email
+  has_many :skills
+  has_many :resources through: :skills
+  has_many :progress_reviews through: :skills
 
 
   def password
