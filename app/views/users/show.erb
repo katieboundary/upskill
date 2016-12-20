@@ -1,3 +1,14 @@
 <h1>Hi, <%= @user.full_name %>!</h1>
-<h2>Here is your user show page</h2>
 
+<h2>Look at your progress!</h2>
+
+<% @user.progress_reviews.each do |progress_review| %>
+  <%= progress_review.skill_name %>
+  <br>
+  <%= progress_review.progress_content %>
+  <br>
+  <%= progress_review.created_at.strftime("%m/%d/%Y") %>
+<% end %>
+
+
+<!-- need logic for if a user does not have any progress reviews yet -->

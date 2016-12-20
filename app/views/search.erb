@@ -1,3 +1,4 @@
 <% @video_ids.each do |video_id| %>
   <%= erb :'partials/_youtube', locals: { video_id: video_id } %>
 <% end %>
+<%= erb :'partials/_progress-form', locals: {user: @user} %>
