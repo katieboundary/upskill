@@ -11,6 +11,7 @@ post '/search' do
   puts "#{params}"
   @video_ids = client.search(params[:search][:q])
   @image_search_query = params[:search][:q]
+  @user = current_user
 
   erb :search
 end

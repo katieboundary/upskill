@@ -12,6 +12,10 @@ div.error {
   color: red;
 }
 
+#photo{
+  max-width: 100%;
+}
+
 /*.login {
   list-style-type: none;
   margin: 0;
@@ -48,8 +52,19 @@ ul.login li a{
 }
 
 #upskill {
-  background-color: blue;
 }
 
+.track-youtube-video{
+  width: 60%;
+  display: block;
+  padding: 10px;
+  /*height: 500px;*/
+  margin: auto;
+
+}
+
+#progress-form{
+
+}
 
 */

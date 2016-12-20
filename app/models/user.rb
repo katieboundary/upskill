@@ -6,8 +6,8 @@ class User < ActiveRecord::Base
   validates :password_hash, presence: true
 
   has_many :skills
-  has_many :resources through: :skills
-  has_many :progress_reviews through: :skills
+  has_many :resources, through: :skills
+  has_many :progress_reviews
 
 
   def password
