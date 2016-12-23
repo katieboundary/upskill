@@ -1,14 +1,26 @@
-<h1>Hi, <%= @user.full_name %>!</h1>
+<h1 class="hi">Hi, <%= @user.full_name %>!</h1>
 
-<h2>Look at your progress!</h2>
+<h2 class="smaller-headings">Look at your progress!</h2>
+<div class="review">
+<% if has_review? == true %>
+  <% @user.progress_reviews.each do |progress_review| %>
+    <br>
+    <br>
+    <div id="skill-name">
+    <%= progress_review.skill_name %>
+    </div>
+    <div id="progress-content">
+    <%= progress_review.progress_content %>
+    </div>
+    <div id="created-at">
+    <%= progress_review.created_at.strftime("%m/%d/%Y") %>
+    </div>
+  <% end %>
+</div>
 
-<% @user.progress_reviews.each do |progress_review| %>
-  <%= progress_review.skill_name %>
-  <br>
-  <%= progress_review.progress_content %>
-  <br>
-  <%= progress_review.created_at.strftime("%m/%d/%Y") %>
 <% end %>
+
+
 
 
 <!-- need logic for if a user does not have any progress reviews yet -->

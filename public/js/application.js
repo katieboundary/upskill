@@ -6,4 +6,13 @@ $(document).ready(function() {
   // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
 });
 
+// var jumboHeight = $('.jumbotron').outerHeight();
+// function parallax(){
+//     var scrolled = $(window).scrollTop();
+//     $('.bg').css('height', (jumboHeight-scrolled) + 'px');
+// }
+
+// $(window).scroll(function(e){
+//     parallax();
+// });
 

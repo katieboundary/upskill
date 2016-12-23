@@ -1,29 +1,34 @@
-<% if session[:user_id] != nil %>
-  <ul class="login">
-    <li>
-      <a href="/">home</a>
-    </li>
-    <li>
-      <form  method="post" action="/sessions/:id">
-        <input type="hidden" name="_method" value='delete'>
-        <input id="logout" type="submit" value="log out">
-      </form>
-    </li>
-  </ul>
-  <br>
-<% else %>
-  <ul class="login">
-    <li>
-      <a href="/users/new">Register</a>
-    </li>
-    <li>
-      <a href="/sessions/new">Login</a>
-    </li>
-    <li>
-      <a href="/">Home</a>
-    </li>
-  </ul>
-  <br>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <% if session[:user_id] != nil %>
+    <ul class="login ">
+      <li>
+        <a href="/">home</a>
+      </li>
+      <li>
+        <a href="/users/<%= current_user.id %> "  class="navbar-link"><%=current_user.full_name %></a>
+      </li>
+      <li>
+        <form  method="post" action="/sessions/:id">
+          <input type="hidden" name="_method" value='delete'>
+          <input id="logout" type="submit" value="log out">
+        </form>
+      </li>
+    </ul>
+    <br>
+  <% else %>
+    <ul class="login">
+      <li>
+        <a href="/users/new" >Register</a>
+      </li>
+      <li>
+        <a href="/sessions/new">Login</a>
+      </li>
+      <li>
+        <a href="/">Home</a>
+      </li>
+    </ul>
+    <br>
 
 
-<%end%>
+  <%end%>
+</nav>
