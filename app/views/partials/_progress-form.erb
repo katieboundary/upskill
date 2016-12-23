@@ -1,5 +1,5 @@
-<h1>Track your progress</h1>
-<form id="progress-form" action="/progress_reviews" method="post">
+<h1 class="smaller-headings">Track your progress</h1>
+<form class="form" id="progress-form" action="/progress_reviews" method="post">
   <input type="hidden" name="progress_review[skill_name]" value="<%=@image_search_query%>">
   <input type="hidden" name="progress_review[user_id]" value="<%=user.id%>">
   <input type="text" name="progress_review[progress_content]" placeholder="What did you learn?" rows="5" cols="50">
